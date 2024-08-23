@@ -28,7 +28,7 @@ public class Banco {
     }
 
     public void getSaldo(){
-        System.out.println("Você possui: R$ " + saldo);
+        System.out.println("Saldo: R$ " + saldo);
     }
 
 }

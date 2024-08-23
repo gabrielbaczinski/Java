@@ -84,7 +84,7 @@ public class Main {
                     String dataHoraFormatada = agora.format(formatter);
 
 
-                    System.out.println("Extrato - " + dataHoraFormatada +);
+                    System.out.println("EXTRATO - " + dataHoraFormatada);
                     usuario.getNome();
                     usuario.getCpf();
                     usuario.getTelefone();
