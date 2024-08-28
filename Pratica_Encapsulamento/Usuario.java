@@ -13,13 +13,17 @@ public class Usuario {
     private String cpf;
     private float renda;
     private boolean verificao;
-
+    Banco banco = new Banco();
 
     public Usuario() {
-        nome = "";
-        telefone = null;
-        cpf = null;
-        renda = 0;
+        this.nome = nome;
+        this.telefone = telefone;
+        this.cpf = cpf;
+        this.renda = renda;
+    }
+
+    public Banco getBanco() {
+        return banco;
     }
 
     public void setNome() {

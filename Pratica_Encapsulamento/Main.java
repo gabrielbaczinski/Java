@@ -7,7 +7,6 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         boolean loop = true;
-        Banco banco = new Banco();
         Usuario usuario = new Usuario();
 
         while (loop) {
@@ -36,15 +35,15 @@ public class Main {
                     break;
 
                 case 2:
-                    banco.sacar();
+                    usuario.getBanco().sacar();
                     break;
 
                 case 3:
-                    banco.depositar();
+                    usuario.getBanco().depositar();
                     break;
 
                 case 4:
-                    banco.getSaldo();
+                    usuario.getBanco().getSaldo();
                     break;
 
                 case 5:
@@ -83,13 +82,12 @@ public class Main {
                     DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
                     String dataHoraFormatada = agora.format(formatter);
 
-
                     System.out.println("EXTRATO - " + dataHoraFormatada);
                     usuario.getNome();
                     usuario.getCpf();
                     usuario.getTelefone();
                     usuario.getRenda();
-                    banco.getSaldo();
+                    usuario.getBanco().getSaldo();
                     System.out.println();
                     break;
 

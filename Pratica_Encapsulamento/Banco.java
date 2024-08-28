@@ -3,11 +3,7 @@ import java.util.Scanner;
 
 public class Banco {
     Scanner sc = new Scanner(System.in);
-    private double saldo;
-
-    public Banco(){
-        saldo = 0.0;
-    }
+    private double saldo = 0;
 
     public void depositar() {
         System.out.println("Quanto deseja depositar: ");
