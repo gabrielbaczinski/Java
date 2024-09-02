@@ -22,8 +22,16 @@ public class Usuario {
         this.renda = renda;
     }
 
-    public Banco getBanco() {
-        return banco;
+    public double sacar(double saldo){
+        return banco.sacar(saldo);
+    }
+
+    public double depositar(double valor){
+        return banco.depositar(valor);
+    }
+
+    public double getSaldo(){
+        return banco.getSaldo();
     }
 
     public void setNome() {

@@ -35,15 +35,19 @@ public class Main {
                     break;
 
                 case 2:
-                    usuario.getBanco().sacar();
+                    System.out.println("Quanto deseja sacar: ");
+                    double valor = sc.nextDouble();
+                    usuario.sacar(valor);
                     break;
 
                 case 3:
-                    usuario.getBanco().depositar();
+                    System.out.println("Quanto deseja depositar: ");
+                    valor = sc.nextDouble();
+                    usuario.depositar(valor);
                     break;
 
                 case 4:
-                    usuario.getBanco().getSaldo();
+                    usuario.getSaldo();
                     break;
 
                 case 5:
@@ -87,7 +91,7 @@ public class Main {
                     usuario.getCpf();
                     usuario.getTelefone();
                     usuario.getRenda();
-                    usuario.getBanco().getSaldo();
+                    usuario.getSaldo();
                     System.out.println();
                     break;
 

@@ -3,28 +3,30 @@ import java.util.Scanner;
 
 public class Banco {
     Scanner sc = new Scanner(System.in);
-    private double saldo = 0;
+    private double saldo = 0.0;
+    private double valor;
 
-    public void depositar() {
-        System.out.println("Quanto deseja depositar: ");
-        double valor = sc.nextDouble();
+    public double depositar(double valor) {
         saldo += valor;
         System.out.println("Novo saldo: R$ " + saldo);
+        return valor;
     }
 
-    public void sacar() {
-        System.out.println("Quanto deseja sacar: ");
-        double valor = sc.nextDouble();
-        if (valor > saldo) {
+    public double sacar(double valor) {
+        if (saldo < valor) {
             System.out.println("Saldo insuficiente.");}
         else {
             saldo -= valor;
             System.out.println("Novo saldo: R$ " + saldo);
         }
+        return saldo;
     }
 
-    public void getSaldo(){
+    public double getSaldo(){
         System.out.println("Saldo: R$ " + saldo);
+        return this.saldo;
     }
+
+
 
 }
