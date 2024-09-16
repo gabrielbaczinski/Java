@@ -1,3 +1,5 @@
+package AtividadeJogo;
+
 public class Jogo {
     public String nome;
     public String genero;

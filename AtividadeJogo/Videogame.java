@@ -1,4 +1,4 @@
-import java.util.Scanner;
+package AtividadeJogo;
 
 public class Videogame {
     public static void main(String[] args) {

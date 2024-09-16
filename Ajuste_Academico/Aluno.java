@@ -10,11 +10,19 @@ public class Aluno {
         this.matricula = matricula;
     }
 
-    public String setAluno(String nome){
+    public String getAluno(){
         return nome;
     }
 
-    public int setMatricula(int matricula){
+    public int getMatricula(){
         return matricula;
+    }
+
+    public void setAluno(String nome){
+        this.nome = nome;
+    }
+
+    public void setMatricula(int matricula){
+        this.matricula = matricula;
     }
 }

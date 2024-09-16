@@ -7,7 +7,7 @@ public class Disciplina {
     private int creditos;
     private String bloco;
     private Professor professor;
-    private ArrayList alunos;
+    private ArrayList<Aluno> alunos;
 
     public Disciplina(String nome, String turno, int creditos, String bloco, Professor professor) {
         this.nome = nome;
@@ -22,10 +22,9 @@ public class Disciplina {
         this.alunos.add(aluno);
     }
 
-    public String printAlunos(){
-        System.out.println(alunos);
-        return alunos.toString();
+    public void printAlunos() {
+        for (Aluno aluno : alunos) {
+            System.out.println("Nome: " + aluno.getAluno() + ", Matrícula: " + aluno.getMatricula());
+        }
     }
-
-
 }

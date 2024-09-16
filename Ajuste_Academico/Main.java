@@ -8,6 +8,14 @@ public class Main {
         boolean loop = true;
         boolean loop_disc = true;
 
+        ArrayList<Disciplina> disciplinas = new ArrayList<>();
+        disciplinas.add(new Disciplina("POO", "Noite", 6, "Bloco 5", new Professor("Marina", 3200)));
+        disciplinas.add(new Disciplina("Estrutura de Dados", "Noite", 4, "Bloco 5", new Professor("Marina", 3200)));
+        disciplinas.add(new Disciplina("XP Criativa", "Noite", 4, "Bloco 5", new Professor("Josi", 3200)));
+        disciplinas.add(new Disciplina("Web Deveploment", "Noite", 4, "Bloco 5", new Professor("Marina", 3200)));
+        disciplinas.add(new Disciplina("Banco de Dados", "Noite", 6, "Bloco 5", new Professor("Cristina", 3200)));
+
+
         while (loop) {
             String menu = """
                     ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
@@ -44,9 +52,9 @@ public class Main {
                         System.out.print("Selecione uma disciplina para a matrícula: ");
                         int escolha_disc = sc.nextInt();
                         sc.nextLine();
+                        Disciplina disciplinaSelecionada = disciplinas.get(escolha_disc - 1);
 
                         if (escolha_disc == 1) {
-                            Disciplina poo = new Disciplina("POO", "Noite", 6, "Bloco 5", new Professor("Marina", 3200));
                             System.out.print("Digite o nome do Aluno: ");
                             String nome = sc.nextLine();
                             a.setAluno(nome);
@@ -54,8 +62,8 @@ public class Main {
                             int matricula = sc.nextInt();
                             a.setMatricula(matricula);
                             sc.nextLine();
-                            poo.adicionarAluno(a);
-                            System.out.println(poo.printAlunos());
+                            disciplinaSelecionada.adicionarAluno(a);
+                            disciplinaSelecionada.printAlunos();
                         }
                         break;
                     }
