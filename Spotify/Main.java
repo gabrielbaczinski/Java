@@ -31,10 +31,12 @@ public class Main {
         String senha = sc.nextLine();
         System.out.print("Como gostaria de ser chamado? \n");
         String nome = sc.nextLine();
-        System.out.print("Qual gênero você se identifica: \n" +
-                "1 - Masculino\n" +
-                "2 - Feminino\n" +
-                "3 - Outro\n");
+        System.out.print("""
+                Qual gênero você se identifica:\s
+                1 - Masculino
+                2 - Feminino
+                3 - Outro
+                """);
         String genero = sc.nextLine();
         System.out.print("Digite sua data de nascimento: \n");
         String dataNascimento = sc.nextLine();
@@ -55,9 +57,11 @@ public class Main {
 
             switch (escolha_disc) {
                 case 1:
-                    System.out.print("Qual plano deseja se cadastrar: \n" +
-                            "1 - Spotify Free\n" +
-                            "2 - Spotify Premium\n");
+                    System.out.print("""
+                            Qual plano deseja se cadastrar:\s
+                            1 - Spotify Free
+                            2 - Spotify Premium
+                            """);
                     int assinatura = sc.nextInt();
                     sc.nextLine();
 
