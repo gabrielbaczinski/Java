@@ -90,6 +90,7 @@ public class Main {
                             cliente.acessarPerfil();
                             break;
                         case 2:
+                            cliente.tocarPlaylist();
                             break;
                         case 3:
                             cliente.printPlaylist();

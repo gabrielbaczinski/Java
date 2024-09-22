@@ -49,7 +49,7 @@ public class Cliente extends Usuario{
         System.out.println("Minha Playlist:");
         for (int i = 0; i < playlist.size(); i++) {
             Musica musica = playlist.get(i);
-            System.out.println("Track " + i + ": " + musica.getArtista() + " - " + musica.getTitulo() + " | Duração: " + musica.getDuracao());
+            System.out.println("Track " + i + 1 + ": " + musica.getArtista() + " - " + musica.getTitulo() + " | Duração: " + musica.getDuracao());
         }
     }
 
