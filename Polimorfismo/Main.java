@@ -5,16 +5,16 @@ public class Main {
             new Gato("Miau", "Felino", "Pular", "Barriga"),
             new Passaro("Piu", "Ave", "Voar", "14 cm"),
             new Peixe("Nemo", "Peixe", "Nadar", "Ósseo")
-};
-    public void imprimirAnimais(Animal animals) {
-        for (Animal a: animals) {
-            System.out.println(a);
+    };
+    
+    public void imprimirAnimais() {
+        for (Animal a : animals) {
+            a.fazerSom();
         }
-
     }
 
     public static void main(String[] args) {
-        Main.imprimiranimais;
+        new Main().imprimirAnimais();
     }
 }
 
