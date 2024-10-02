@@ -21,6 +21,18 @@ public class Animal {
         System.out.println("O animal está comendo");
     }
 
+    public String getNome(){
+        return nome;
+    }
+
+    public String getEspecie(){
+        return especie;
+    }
+
+    public String getHabilidade(){
+        return habilidade;
+    }
+
     public void fazerSom(){
         System.out.println("O animal está fazendo barulho");
     }
