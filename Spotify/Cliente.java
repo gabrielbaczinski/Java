@@ -1,6 +1,7 @@
 package Spotify;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Cliente extends Usuario{
     private int assinatura;
@@ -21,8 +22,21 @@ public class Cliente extends Usuario{
     }
 
     public void tocarPlaylist() {
-        for (Musica m : playlist) {
-            System.out.println(m);
+        for (int i = 0; i < playlist.size(); i++) {
+            Musica m = playlist.get(i);
+            System.out.println("Agora está tocando: ");
+            System.out.println("Track " + (i + 1) + ": " + m.getArtista() + " - " + m.getTitulo() + " | Duração: " + m.getDuracao());
+            System.out.println("1 - Próxima música\n2 - Parar reprodução");
+            Scanner sc = new Scanner(System.in);
+            int comando = sc.nextInt();
+            if (comando == 1) {
+                continue;
+            } else if (comando == 2) {
+                System.out.println("Reprodução interrompida.");
+                break;
+            } else {
+                System.out.println("Comando inválido. Continuando com a próxima música.");
+            }
         }
     }
 
@@ -41,7 +55,7 @@ public class Cliente extends Usuario{
     public void printMusicas(ArrayList<Musica> discografia) {
         for (int i = 0; i < discografia.size(); i++) {
             Musica musica = discografia.get(i);
-            System.out.println(i + 1 + ": " + musica.getArtista() + " - " + musica.getTitulo() + " | Duração: " + musica.getDuracao());
+            System.out.println((i + 1) + ": " + musica.getArtista() + " - " + musica.getTitulo() + " | Duração: " + musica.getDuracao());
         }
     }
 
@@ -49,7 +63,7 @@ public class Cliente extends Usuario{
         System.out.println("Minha Playlist:");
         for (int i = 0; i < playlist.size(); i++) {
             Musica musica = playlist.get(i);
-            System.out.println("Track " + i + 1 + ": " + musica.getArtista() + " - " + musica.getTitulo() + " | Duração: " + musica.getDuracao());
+            System.out.println("Track " + (i + 1) + ": " + musica.getArtista() + " - " + musica.getTitulo() + " | Duração: " + musica.getDuracao());
         }
     }
 
@@ -63,4 +77,5 @@ public class Cliente extends Usuario{
                         "Assinatura: " + getAssinatura());
 
     }
+
 }
