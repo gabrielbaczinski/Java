@@ -26,7 +26,8 @@ public class Cliente extends Usuario{
             Musica m = playlist.get(i);
             System.out.println("Agora está tocando: ");
             System.out.println("Track " + (i + 1) + ": " + m.getArtista() + " - " + m.getTitulo() + " | Duração: " + m.getDuracao());
-            System.out.println("1 - Próxima música\n2 - Parar reprodução");
+            System.out.println("1 - Proximal música" +
+                              "\n2 - Parar reprodução");
             Scanner sc = new Scanner(System.in);
             int comando = sc.nextInt();
             if (comando == 1) {
