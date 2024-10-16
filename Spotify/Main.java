@@ -1,7 +1,6 @@
 package Spotify;
 import java.util.ArrayList;
 import java.util.Scanner;
-import java.util.Iterator;
 
 public class Main {
     public static void main(String[] args) {

@@ -1,13 +1,20 @@
 package BibliotecaDigital;
-
-import Spotify.Musica;
-
 import java.util.ArrayList;
 
 public class Ebook extends ItemBibliotecaDigital implements Baixavel{
 
     public Ebook(String titulo, String autor){
         super(titulo, autor);
+    }
+
+    @Override
+    public String getAutor() {
+        return autor;
+    }
+
+    @Override
+    public String getTitulo() {
+        return titulo;
     }
 
     public String descricao(){
@@ -20,10 +27,10 @@ public class Ebook extends ItemBibliotecaDigital implements Baixavel{
         System.out.println(titulo + "está sendo baixado...");
     }
 
-    public void printEbooks(ArrayList<Ebook> ebooks) {
+    public void getEbooks(ArrayList<Ebook> ebooks) {
         for (int i = 0; i < ebooks.size(); i++) {
             Ebook ebook = ebooks.get(i);
-            System.out.println((i + 1) + ": " + .getArtista() + " - " + musica.getTitulo() + " | Duração: " + musica.getDuracao());
+            System.out.println((i + 1) + ": " + ebook.getTitulo() + " - " + ebook.getAutor());
         }
     }
 }

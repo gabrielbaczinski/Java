@@ -1,8 +1,8 @@
 package BibliotecaDigital;
 
 public abstract class ItemBibliotecaDigital {
-    private String titulo;
-    private String autor;
+    protected String titulo;
+    protected String autor;
 
     public ItemBibliotecaDigital(String titulo, String autor) {
         this.titulo = titulo;
@@ -11,7 +11,11 @@ public abstract class ItemBibliotecaDigital {
 
     public abstract String descricao();
 
-    public abstract String getAutor();
+    public String getTitulo() {
+        return titulo;
+    }
 
-    public abstract String getTitulo();
+    public String getAutor() {
+        return autor;
+    }
 }
